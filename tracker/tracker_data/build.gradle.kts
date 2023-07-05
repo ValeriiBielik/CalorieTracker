@@ -1,5 +1,6 @@
 apply {
     from("$rootDir/base-module.gradle")
+    from("$rootDir/namespace-tracker-data.gradle")
 }
 
 dependencies {

@@ -1,0 +1,3 @@
+android {
+    namespace = "com.plcoding.core_ui"
+}
