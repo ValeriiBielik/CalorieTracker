@@ -1,4 +1,4 @@
-package com.plcoding.weight
+package com.plcoding.onboarding_presentation.weight
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

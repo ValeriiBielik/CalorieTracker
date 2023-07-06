@@ -1,4 +1,4 @@
-package com.plcoding.weight
+package com.plcoding.onboarding_presentation.weight
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

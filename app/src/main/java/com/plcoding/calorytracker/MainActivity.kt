@@ -18,7 +18,7 @@ import com.plcoding.onboarding_presentation.age.AgeScreen
 import com.plcoding.onboarding_presentation.gender.GenderScreen
 import com.plcoding.onboarding_presentation.height.HeightScreen
 import com.plcoding.onboarding_presentation.welcome.WelcomeScreen
-import com.plcoding.weight.WeightScreen
+import com.plcoding.onboarding_presentation.weight.WeightScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
