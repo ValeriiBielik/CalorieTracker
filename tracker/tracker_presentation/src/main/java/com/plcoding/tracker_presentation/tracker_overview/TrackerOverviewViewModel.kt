@@ -25,6 +25,7 @@ class TrackerOverviewViewModel @Inject constructor(
 ) : ViewModel() {
 
     var state by mutableStateOf(TrackerOverviewState())
+        private set
 
     private val _uiEvent = Channel<UiEvent>()
     val uiEvent = _uiEvent.receiveAsFlow()
