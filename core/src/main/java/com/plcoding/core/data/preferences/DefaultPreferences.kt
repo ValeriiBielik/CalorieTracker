@@ -6,6 +6,7 @@ import com.plcoding.core.domain.model.Gender
 import com.plcoding.core.domain.model.GoalType
 import com.plcoding.core.domain.model.UserInfo
 import com.plcoding.core.domain.preferences.Preferences
+import com.plcoding.core.domain.preferences.Preferences.Companion.KEY_SHOULD_SHOW_ON_BOARDING
 
 class DefaultPreferences(
     private val sharedPref: SharedPreferences
@@ -59,5 +60,13 @@ class DefaultPreferences(
             proteinRatio = sharedPref.getFloat(Preferences.KEY_PROTEIN_RATIO, -1f),
             fatRatio = sharedPref.getFloat(Preferences.KEY_FAT_RATIO, -1f),
         )
+    }
+
+    override fun saveShouldShowOnBoarding(shouldShow: Boolean) {
+        sharedPref.edit().putBoolean(KEY_SHOULD_SHOW_ON_BOARDING, shouldShow).apply()
+    }
+
+    override fun loadShouldShowOnBoarding(): Boolean {
+        return sharedPref.getBoolean(KEY_SHOULD_SHOW_ON_BOARDING, true)
     }
 }

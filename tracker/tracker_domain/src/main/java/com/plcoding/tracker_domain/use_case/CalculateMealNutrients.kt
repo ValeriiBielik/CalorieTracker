@@ -33,6 +33,7 @@ class CalculateMealNutrients(
 
         val userInfo = preferences.loadUserInfo()
 
+        // todo looks like it is not necessary to update goal values by every total values recalculation. Check and refactor if needed
         val caloryGoal = dailyCaloryRequirement(userInfo)
         val carbsGoal = (caloryGoal * userInfo.carbRatio / 4f).roundToInt()
         val proteinGoal = (caloryGoal * userInfo.proteinRatio / 4f).roundToInt()
