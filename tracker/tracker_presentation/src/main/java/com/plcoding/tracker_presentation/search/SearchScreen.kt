@@ -74,7 +74,10 @@ fun SearchScreen(
         SearchTextField(
             text = state.query,
             onValueChange = { viewModel.onEvent(SearchEvent.OnQueryChange(it)) },
-            onSearch = { viewModel.onEvent(SearchEvent.OnSearch) },
+            onSearch = {
+                keyboardController?.hide()
+                viewModel.onEvent(SearchEvent.OnSearch)
+            },
             onFocusChanged = { viewModel.onEvent(SearchEvent.OnSearchFocusChange(it.isFocused)) },
             shouldShowHint = state.isHintVisible
         )
@@ -86,6 +89,7 @@ fun SearchScreen(
                     onClick = { viewModel.onEvent(SearchEvent.OnToggleTrackableFood(food.food)) },
                     onAmountChange = { viewModel.onEvent(SearchEvent.OnAmountForFoodChange(food.food, it)) },
                     onTrack = {
+                        keyboardController?.hide()
                         viewModel.onEvent(
                             SearchEvent.OnTrackFoodClick(
                                 food = food.food,
